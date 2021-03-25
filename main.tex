@@ -1,4 +1,4 @@
-\documentclass{article}
+﻿﻿\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{listings}
@@ -42,7 +42,7 @@
 \tableofcontents
 \newpage
 \section{Introducción}\label{intro}
-El triqui es un juego conocino por muchas personas al rededor del mundo, que consiste en un tablero de 9 posiciones (3x3) y dos contrincantes cada uno con una ficha o símbolo diferente, normalmente equis "X" y ceros "0"; el objetivo principal de cada jugador es lograr poner su símbolo en tres casillas consecutivas, ya sea en horizontal, vertical o diagonal. En cada turno el jugador bvuscará lograr su objetivo, o impedir ser vencido por su contendor.\\\
+El triqui es un juego conocino por muchas personas al rededor del mundo, que consiste en un tablero de 9 posiciones (3x3) y dos contrincantes cada uno con una ficha o símbolo diferente, normalmente equis 'X' y ceros '0'; el objetivo principal de cada jugador es lograr poner su símbolo en tres casillas consecutivas, ya sea en horizontal, vertical o diagonal. En cada turno el jugador bvuscará lograr su objetivo, o impedir ser vencido por su contendor.\\\
 
 Este popular juego ha sido el orígen de una gran categoría de juegos informáticos para diferentes plataformas, conocidos como los juegos "tres en raya"\\\
 
@@ -54,7 +54,7 @@ El multi triqui es una variación del tradicional triqui de 9 casillas en un cua
 
 \subsection {Tablero}
 
-El tablero drezestará distribuido en tres cuadrados, uno dentro del anterior, cada cuadrado tendrá en total 8 posiciones: En las esquinas (4) y en los puntos medios de sus lados (4), para un total de veinticuatro (24) posiciones. \\\
+El tablero estará distribuido en tres cuadrados, uno dentro del anterior, cada cuadrado tendrá en total 8 posiciones: En las esquinas (4) y en los puntos medios de sus lados (4), para un total de veinticuatro (24) posiciones. \\\
 
 Cada posición además de unirse por las líneas demarcadas por los lados de su cuadrado, también se unirá a los otros dos cuadros con líneas entre las esquinas, formando diagonales de tres posiciones; y con líneas entre los puntos medios de los lados, uniendo también tres posiciones (una de cada cuadro).
 
@@ -64,7 +64,9 @@ Dos participantes, cada uno con doce fichas y turnos intercalados.
 En cada turno el participante ubica una de sus fichas en una posición del tablero.\\
 A partir del cuarto turno, el participante debe fijarse en ubicar su ficha en un lugar en el que pueda lograr un triqui, o interferir para que su contrincante no lo pueda hacer en su próximo turno.
 Si el jugador logra un triqui, puede tomar una ficha de su oponente que esté en el tablero, bajando así sus posibilidades de formar un triqui.\\
-Una vez puestas las doce fichas por cada uno de los participantes, el turno será para desplazar alguna de las fichas que tiene en el tablero hasta lograr formar un nuevo triqui, y seguir quitando fichas al oponente.
+Una vez puestas las doce fichas por cada uno de los participantes, el turno será para desplazar alguna de las fichas que tiene en el tablero hasta lograr formar un nuevo triqui, y seguir quitando fichas al oponente.\\
+Al retirar fichas del oponente trás realizar triqui, sólo se podrán retirar aquellas fichas que no estén formando ya un triqui. Es decir que las fichas que forman triqui, son fichas aseguradas y no podrán ser capturadas.
+
 
 
 \subsection {Desplazamientos}
@@ -74,7 +76,7 @@ Las fichas en el tablero se pueden desplazar en horizontal, vertical o diagonal 
 \subsection {Triqui}
 
 El triqui se forma en línea recta o diagonal con tres casillas ocupadas por el mismo jugador (su ficha). Al formar un triqui se puede quitar del tablero una ficha del oponente.\\\
-Si en un desplazamiento se logra formar dos triquis "Multi triqui", se le quitará al oponente ese mismo número de fichas del tablero.
+Si en un desplazamiento se logra formar dos triquis "Multi triqui", se le quitará al oponente ese mismo número de fichas del tablero, siempre que esas fichas no estén aseguradas por un triqui previo del oponente.\\\
 El multi triqui puede estar formado por dos líneas de un cuadro que comparten una misma esquina, o por una diagonal y un lado de un cuadro que comparten una casilla de la diagonal.
 
 \subsection {Fin del juego}
@@ -88,67 +90,13 @@ Permitir registrar el nombre de los jugadores.\\
 Las fichas a usar en la partida pueden tener diferentes diseños y colores para elegir.\\
 El tablero puede brindar difrentes fondos, en particular tener la opción de ser oscuro o claro.\\
 
-\subsection{Citación}
-Vamos a citar por ejemplo un artículo de \textbf{Albert Einstein} \cite{einstein}.
-También es posible citar libros \cite{dirac} o documentos en línea \cite{knuthwebsite}.\\\\
-Revisar en la última sección el formato de las referencias en IEEE.
 
-\subsection{Incluir código en el documento}
-%
-A continuación, se presenta el código \ref{codigo_ejemplo}, que nos permite incluir en el informe partes de programa que requieran una explicación adicional.
-\begin{lstlisting}[language=C++, label=codigo_ejemplo]
-// Programa desarrollado, compilado y ejecutado en https://www.onlinegdb.com
-#include <iostream>
+\subsubsection{Ilustración Inicial del Juego} \label{imagenes}
 
-/*
- * Esto es un comentario de varias lineas
- */
-
-// Comentario de una sola linea
-
-#define N 10
-
-using namespace std;
-
-int main()
-{
-    
-    for( int i = 0 ; i < N ; i++ ){
-        
-        if( !(i % 2) )
-            cout << " El valor de i es -> " << i << endl;
-    }
-    
-    return 0;
-}
-
-//Resultado programa
-
-/*
-El valor de i es -> 0
-El valor de i es -> 2
-El valor de i es -> 4
-El valor de i es -> 6
-El valor de i es -> 8
-*/
-\end{lstlisting}
-En la sección \ref{imagenes}, se presentará como añadir ilustraciones al texto.
-
-\section{Inclusión de imágenes} \label{imagenes}
-
-En la Figura (\ref{fig:cpplogo}), se presenta el logo de C++ contenido en la carpeta images.
+En la Figura (\ref{fig:image1}), se presenta una imagen del tablero vacío en un diseño a lápiz sobre cartón.
 
 \begin{figure}[h]
-\includegraphics[width=2cm]{cpplogo.png}
-\centering
-\caption{Logo de C++}
-\label{fig:cpplogo}
-\end{figure}
-
-En la Figura (\ref{fig:image1}), se presenta una imagen del tablero vacío.
-
-\begin{figure}[h]
-\includegraphics[width=4cm]{image1.jpeg}
+\includegraphics[width=6.25cm]{image1.jpeg}
 \centering
 \caption{Tablero vacío}
 \label{fig:image1}
@@ -157,7 +105,7 @@ En la Figura (\ref{fig:image1}), se presenta una imagen del tablero vacío.
 En la Figura (\ref{fig:image2}), se presenta una imagen del tablero con fichas.
 
 \begin{figure}[h]
-\includegraphics[width=4cm]{image2.jpeg}
+\includegraphics[width=6.25cm]{image2.jpeg}
 \centering
 \caption{Tablero con fichas}
 \label{fig:image2}
